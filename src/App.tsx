@@ -1,17 +1,11 @@
 
+import Rotas from './store/router'
 
-function App() {
+export function App() {
 
-
-  
-  
   return (
-    <div className="App">
-     <h1>teste</h1>
-
-     
-    </div>
+      <Rotas/>
   )
 }
 
-export default App
+

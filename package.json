@@ -11,7 +11,8 @@
     "history": "^5.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.4.0-pre.2"
+    "react-router-dom": "^6.4.0-pre.2",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

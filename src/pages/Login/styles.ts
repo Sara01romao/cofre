@@ -1,32 +1,41 @@
 import styled from "styled-components";
 
-/* export const Teste = styled.button`
-    background: red;
-
-
-
-`; */
-
 export const MainForm = styled.main`
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 79px);
   align-items: center;
- 
 
   div {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 30px;
+
+    a {
+      text-align: center;
+      color: var(--color1);
+      &:hover {
+        color: var(--color2);
+      }
+    }
   }
 
-  img{
+  img {
     max-width: 400px;
     display: block;
     margin: 0 auto;
+  }
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+    div{
+      padding: 10px;
+    }
+    img {
+      display: none;
+    }
   }
 `;

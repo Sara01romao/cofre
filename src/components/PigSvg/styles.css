@@ -1,0 +1,45 @@
+#stars g path {
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-delay: 0.55s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#stars path {
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
+}
+
+@keyframes rotate {
+  from {
+    opacity: 0.5;
+    transform: scale(1);
+    transform: translateY(0px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+}
+
+#money-line {
+  animation-name: anime-line;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes anime-line {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

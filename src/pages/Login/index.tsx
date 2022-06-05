@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import { MainForm } from "./styles";
-import PigImg from "../../assets/images/pig.svg"
 import { Input } from "../../components/Input";
 import { useState } from "react";
+import PigSvg from "../../components/PigSvg";
 
 
 
@@ -29,7 +29,8 @@ export default function Login() {
          </div>
         
       </div>
-      <img src={PigImg} alt="Ilustração  cofrinho " />
+
+     <PigSvg/>
 
     </MainForm>
     

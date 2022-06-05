@@ -23,7 +23,7 @@ export const MainForm = styled.main`
     }
   }
 
-  img {
+  svg {
     max-width: 400px;
     display: block;
     margin: 0 auto;
@@ -34,7 +34,7 @@ export const MainForm = styled.main`
     div{
       padding: 10px;
     }
-    img {
+    svg {
       display: none;
     }
   }

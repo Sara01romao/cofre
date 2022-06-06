@@ -21,7 +21,7 @@ export default function Login() {
           <h1>Login</h1>
           <Input typeInput="text" id="email" setChange={setEmail} value={email} placeholder="Email"/>
           <Input typeInput="password" id="password" setChange={setPassword} value={passaword} placeholder="Senha"/>
-          <small>Esqueceu a senha?</small>
+          <small><Link to="/">Esqueceu a senha?</Link></small>
           
           <Button txt="Entrar" ></Button>
           <Link to="/createLogin">Criar conta</Link>

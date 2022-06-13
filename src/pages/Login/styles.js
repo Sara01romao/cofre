@@ -11,8 +11,7 @@ export const MainForm = styled.main`
   div {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 30px;
+    gap: 12px;
 
     a {
       text-align: center;
@@ -31,8 +30,8 @@ export const MainForm = styled.main`
 
   @media screen and (max-width: 767px) {
     grid-template-columns: 1fr;
-    div{
-      padding: 10px;
+    .inputContent{
+      padding: 0px 10px;
     }
     svg {
       display: none;

@@ -19,6 +19,13 @@ export const MainCreate = styled.main`
     flex-direction: column;
     align-items: center;
 
+    p{
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--color1);
+    }
+
 }
 
  form{

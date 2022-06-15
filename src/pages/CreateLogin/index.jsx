@@ -16,6 +16,7 @@ export  function CreateLogin() {
         <div className='infoCreate'>
          
           <img src={ilustration} alt="ilustração objetivos" />
+          <p>Planejamento financeiro <br/>para realizar sonhos</p>
         </div>
      
          <div>

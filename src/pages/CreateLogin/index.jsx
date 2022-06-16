@@ -19,21 +19,20 @@ export  function CreateLogin() {
           <p>Planejamento financeiro <br/>para realizar sonhos</p>
         </div>
      
-         <div>
-          <h1>Criar uma conta</h1>
-          <form action="">
-            <Input typeInput="text" id="Nome" setChange={setName} value={name} placeholder="Nome"/>
-            <Input typeInput="text" id="Email" setChange={setEmail} value={email} placeholder="Email"/>
-            <Input typeInput="password" id="Senha" setChange={setPassword} value={password} placeholder="Senha"/>
-            <Input typeInput="password" id="Confimar Senha" setChange={setPasswordConfirm} value={passwordConfirm} placeholder="Confirma senha"/>
+        <div className='form-content'>
+        <h1>Criar uma conta</h1>
+        <form action="">
+          <Input typeInput="text" id="Nome" setChange={setName} value={name} placeholder="Nome"/>
+          <Input typeInput="text" id="Email" setChange={setEmail} value={email} placeholder="Email"/>
+          <Input typeInput="password" id="Senha" setChange={setPassword} value={password} placeholder="Senha"/>
+          <Input typeInput="password" id="Confimar Senha" setChange={setPasswordConfirm} value={passwordConfirm} placeholder="Confirma senha"/>
+          
+          <Button txt="Cadastrar"/>
+        </form>
+        </div>
+          
             
-            <Button txt="Cadastrar"/>
-          </form>
-         </div>
-            
-            
-         
-      
+        
     </MainCreate>
   )
 }

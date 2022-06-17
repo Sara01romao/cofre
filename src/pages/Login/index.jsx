@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import { MainForm } from "./styles";
 import { Input } from "../../components/Input";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PigSvg from "../../components/PigSvg";
 
 
@@ -12,6 +12,13 @@ import PigSvg from "../../components/PigSvg";
 export default function Login() {
   const [email, setEmail] = useState('');
   const [passaword, setPassword] = useState('');
+
+
+ useEffect(()=>{
+   const user= localStorage.getItem('useCofre');
+   console.log("login use",user)
+
+ },[])
 
 
   return (

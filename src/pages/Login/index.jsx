@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 import { MainForm } from "./styles";
 import { Input } from "../../components/Input";
@@ -10,16 +10,24 @@ import PigSvg from "../../components/PigSvg";
 
 
 export default function Login() {
+  const [user, setUser] = useState({})
   const [email, setEmail] = useState('');
   const [passaword, setPassword] = useState('');
+  let navigate = useNavigate();
 
 
  useEffect(()=>{
-   const user= localStorage.getItem('useCofre');
-   console.log("login use",user)
+   const userLocal= localStorage.getItem('useCofre');
+   setUser(JSON.parse(userLocal));
+    
+   if(userLocal){
+     navigate('/home')
+   }
+  
 
  },[])
 
+ 
 
   return (
     <MainForm>

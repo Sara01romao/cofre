@@ -12,6 +12,7 @@ export  function Input({typeInput, setChange, value, id, placeholder}) {
         id={id}
         onChange={e =>setChange(e.target.value)} value={value}
         placeholder={placeholder}
+        required
       />
      </InpuContainer>
      

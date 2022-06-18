@@ -21,13 +21,9 @@ export  function CreateLogin() {
     if(password === passwordConfirm && user){
       setMsgError(null)
       localStorage.setItem('useCofre', JSON.stringify(user))
+      navegate('/')
     }else{
-      setMsgError('Senha invalida')
-    }
-   
-    if(user){
-      
-      /* navegate('/') */
+      setMsgError('Senha inválida')
     }
    
 

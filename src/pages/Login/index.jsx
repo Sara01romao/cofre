@@ -19,9 +19,11 @@ export default function Login() {
  useEffect(()=>{
    const userLocal= localStorage.getItem('useCofre');
    setUser(JSON.parse(userLocal));
+   
     
-   if(userLocal){
-     navigate('/home')
+   if(user){
+     /* navigate('/home') */
+     console.log(user)
    }
   
 

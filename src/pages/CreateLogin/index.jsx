@@ -4,19 +4,31 @@ import { Input } from '../../components/Input';
 import { MainCreate } from './styles';
 import ilustration from '../../assets/images/create.svg'
 import Button from '../../components/Button';
+import { useNavigate } from 'react-router-dom';
 
 export  function CreateLogin() {
   const [name, setName]= useState('');
   const [email, setEmail]=useState('');
   const [password, setPassword]= useState('');
   const [passwordConfirm, setPasswordConfirm]= useState('');
+  const [msgError, setMsgError] = useState(null);
+  let navegate = useNavigate();
 
   function handleCreate(event){
     event.preventDefault();
     const user =[{name:name, email:email, password:password}];
-    console.log(user)
-
-    localStorage.setItem('useCofre', JSON.stringify(user))
+    
+    if(password === passwordConfirm && user){
+      setMsgError(null)
+      localStorage.setItem('useCofre', JSON.stringify(user))
+    }else{
+      setMsgError('Senha invalida')
+    }
+   
+    if(user){
+      
+      /* navegate('/') */
+    }
    
 
   }
@@ -37,8 +49,8 @@ export  function CreateLogin() {
           <Input typeInput="text" id="Nome" setChange={setName} value={name} placeholder="Nome"/>
           <Input typeInput="text" id="Email" setChange={setEmail} value={email} placeholder="Email"/>
           <Input typeInput="password" id="Senha" setChange={setPassword} value={password} placeholder="Senha"/>
-{/*           <Input typeInput="password" id="Confimar Senha" setChange={setPasswordConfirm} value={passwordConfirm} placeholder="Confirma senha"/>
- */}          
+          <Input typeInput="password" id="Confimar Senha" setChange={setPasswordConfirm} value={passwordConfirm} placeholder="Confirma senha"/>
+          {msgError?<p style={{color:'red'}}>{msgError}</p>:''}
           <Button txt="Cadastrar"/>
         </form>
         </div>

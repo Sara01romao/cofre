@@ -36,14 +36,14 @@ export default function Login() {
          
           <h1>Login</h1>
           <form>
-          <Input typeInput="text" id="Email" setChange={setEmail} value={email} placeholder="Email"/>
-          <Input typeInput="password" id="Senha" setChange={setPassword} value={passaword} placeholder="Senha"/>
-          <small><Link to="/">Esqueceu a senha?</Link></small>
-          
-          <Button txt="Entrar"></Button>
+            <Input typeInput="text" id="Email" setChange={setEmail} value={email} placeholder="Email"/>
+            <Input typeInput="password" id="Senha" setChange={setPassword} value={passaword} placeholder="Senha"/>
+            <small><Link to="/">Esqueceu a senha?</Link></small>
+            
+            <Button txt="Entrar"></Button>
           </form>
      
-          <Link to="/createLogin">Criar conta</Link>
+          <Link to="/createLogin" className="link">Criar conta</Link>
          
         
         

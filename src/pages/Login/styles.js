@@ -8,19 +8,23 @@ export const MainForm = styled.main`
   height: calc(100vh - 79px);
   align-items: center;
 
-  div {
+  form {
     display: flex;
     flex-direction: column;
     gap: 12px;
 
-    a {
-      text-align: center;
+    
+  }
+
+  .link {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
       color: var(--color1);
       &:hover {
         color: var(--color2);
       }
     }
-  }
 
   svg {
     max-width: 400px;

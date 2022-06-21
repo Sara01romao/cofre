@@ -10,6 +10,15 @@ export const MainCreate = styled.main`
   div {
     flex: 1;
   }
+  .link {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+      color: var(--color1);
+      &:hover {
+        color: var(--color2);
+      }
+    }
 
   .infoCreate {
     flex: 1;
@@ -36,7 +45,7 @@ export const MainCreate = styled.main`
     }
     form {
       flex: 1;
-      padding: 30px;
+      padding: 30px 30px 15px;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -44,6 +53,7 @@ export const MainCreate = styled.main`
   }
 
   @media screen and (max-width: 767px) {
+    height: auto;
     .infoCreate {
       display: none;
     }

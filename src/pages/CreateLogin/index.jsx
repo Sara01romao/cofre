@@ -4,7 +4,7 @@ import { Input } from '../../components/Input';
 import { MainCreate } from './styles';
 import ilustration from '../../assets/images/create.svg'
 import Button from '../../components/Button';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export  function CreateLogin() {
   const [name, setName]= useState('');
@@ -49,6 +49,9 @@ export  function CreateLogin() {
           {msgError?<p style={{color:'red'}}>{msgError}</p>:''}
           <Button txt="Cadastrar"/>
         </form>
+        <Link to="/" className="link">Voltar</Link>
+         
+
         </div>
           
             

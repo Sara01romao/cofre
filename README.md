@@ -24,7 +24,7 @@ styled-components
 # :hourglass_flowing_sand: Planejamento do projeto
 
 - [x] Page Login
-- [ ] Page Cadastro
+- [x] Page Cadastro
 - [ ] Home
 - [ ] Criar objetivo
 - [ ] Remover objetivo

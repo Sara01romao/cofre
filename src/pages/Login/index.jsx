@@ -2,14 +2,17 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 import { MainForm } from "./styles";
 import { Input } from "../../components/Input";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import PigSvg from "../../components/PigSvg";
+import { UserContext } from "../../context/user";
+
 
 
 
 
 
 export default function Login() {
+  const {name} = useContext(UserContext)
   const [user, setUser] = useState('')
   const [email, setEmail] = useState('');
   const [passaword, setPassword] = useState('');
@@ -51,7 +54,7 @@ export default function Login() {
      
           <Link to="/createLogin" className="link">Criar conta</Link>
          
-        
+        {name}
         
       </div>
 

@@ -1,10 +1,11 @@
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Input } from '../../components/Input';
 import { MainCreate } from './styles';
 import ilustration from '../../assets/images/create.svg'
 import Button from '../../components/Button';
 import { Link, useNavigate } from 'react-router-dom';
+import { UserContext } from '../../context/user';
 
 export  function CreateLogin() {
   const [name, setName]= useState('');
@@ -13,15 +14,22 @@ export  function CreateLogin() {
   const [passwordConfirm, setPasswordConfirm]= useState('');
   const [msgError, setMsgError] = useState(null);
   let navegate = useNavigate();
+  const {setUser, user} = useContext(UserContext);
+
+ 
 
   function handleCreate(event){
     event.preventDefault();
-    const user =[{name:name, email:email, password:password}];
+   /*  const user =[{name:name, email:email, password:password}]; */
     
-    if(password === passwordConfirm && user){
+   setUser({name:name, email:email, password:password})
+    if(password === passwordConfirm ){
       setMsgError(null)
-      localStorage.setItem('useCofre', JSON.stringify(user))
-      navegate('/')
+     
+      /* localStorage.setItem('useCofre', JSON.stringify(user)) */
+      /* navegate('/') */
+
+      console.log(user)
     }else{
       setMsgError('Senha inválida')
     }

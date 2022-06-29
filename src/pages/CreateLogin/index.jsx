@@ -14,14 +14,22 @@ export  function CreateLogin() {
   const [passwordConfirm, setPasswordConfirm]= useState('');
   const [msgError, setMsgError] = useState(null);
   let navegate = useNavigate();
-  const { user, setUser} = useContext(UserContext);
+  let {setUserData} = useContext(UserContext);
 
  
 
   function handleCreate(e){
-    e.preventDefault();;
-    const usuario ={name:name1, email:email, password:password};
-  
+    e.preventDefault();
+    const userObj ={name:name, email:email, password:password};
+
+    if(password === passwordConfirm ){
+      setMsgError(null)
+      setUserData(userObj)
+       
+      navegate('/') 
+    }else{
+      setMsgError('Senha inválida')
+    }
 
    /*  if(password === passwordConfirm ){
       setMsgError(null)
@@ -34,8 +42,9 @@ export  function CreateLogin() {
       setMsgError('Senha inválida')
     } */
    
-
+ 
   }
+
 
 
   return (
@@ -48,18 +57,18 @@ export  function CreateLogin() {
         </div>
      
         <div className='form-content'>
-        <h1>Criar uma conta</h1>
-        <form onSubmit={handleCreate} >
-          <Input typeInput="text" id="Nome" setChange={setName} value={name} placeholder="Nome"/>
-          <Input typeInput="text" id="Email" setChange={setEmail} value={email} placeholder="Email"/>
-          <Input typeInput="password" id="Senha" setChange={setPassword} value={password} placeholder="Senha"/>
-          <Input typeInput="password" id="Confimar Senha" setChange={setPasswordConfirm} value={passwordConfirm} placeholder="Confirma senha"/>
-          {msgError?<p style={{color:'red'}}>{msgError}</p>:''}
-          <Button txt="Cadastrar"/>
-        </form>
-        <Link to="/" className="link">Voltar</Link>
-         
-
+          <h1>Criar uma conta</h1>
+          <form onSubmit={handleCreate} >
+            <Input typeInput="text" id="Nome" setChange={setName} value={name} placeholder="Nome"/>
+            <Input typeInput="text" id="Email" setChange={setEmail} value={email} placeholder="Email"/>
+            <Input typeInput="password" id="Senha" setChange={setPassword} value={password} placeholder="Senha"/>
+            <Input typeInput="password" id="Confimar Senha" setChange={setPasswordConfirm} value={passwordConfirm} placeholder="Confirma senha"/>
+            {msgError?<p style={{color:'red'}}>{msgError}</p>:''}
+            <Button typeBtn="submit" txt="Cadastrar"/>
+          </form>
+          <Link to="/" className="link">Voltar</Link>
+      
+      
         </div>
           
             

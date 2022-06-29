@@ -12,8 +12,8 @@ import { UserContext } from "../../context/user";
 
 
 export default function Login() {
-  const {name, user} = useContext(UserContext)
-  /* const [user, setUser] = useState('') */
+  const {userData, setUserData} = useContext(UserContext)
+  const [user, setUser] = useState('')
   const [email, setEmail] = useState('');
   const [passaword, setPassword] = useState('');
   let navigate = useNavigate();
@@ -49,13 +49,13 @@ export default function Login() {
             <Input typeInput="password" id="Senha" setChange={setPassword} value={passaword} placeholder="Senha"/>
             <small><Link to="/">Esqueceu a senha?</Link></small>
             
-            <Button txt="Entrar"></Button>
+            <Button onClick={e => setName("sara")} txt="Entrar"></Button>
           </form>
-     
+         
           <Link to="/createLogin" className="link">Criar conta</Link>
          
-        {name}
-        {user.email}
+       
+        {userData != null? userData.name : ''}
       </div>
 
      <PigSvg/>

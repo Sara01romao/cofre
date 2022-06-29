@@ -4,9 +4,9 @@ import { Btn } from './styles';
 
 
 
-export default function Button({txt , btnClick}) {
+export default function Button({txt , btnClick, typeBtn}) {
   return (
-    <Btn onClick={btnClick}>
+    <Btn type={typeBtn} onClick={btnClick}>
          {txt}
     </Btn>
     

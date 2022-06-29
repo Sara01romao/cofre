@@ -12,8 +12,8 @@ import { UserContext } from "../../context/user";
 
 
 export default function Login() {
-  const {name} = useContext(UserContext)
-  const [user, setUser] = useState('')
+  const {name, user} = useContext(UserContext)
+  /* const [user, setUser] = useState('') */
   const [email, setEmail] = useState('');
   const [passaword, setPassword] = useState('');
   let navigate = useNavigate();
@@ -55,7 +55,7 @@ export default function Login() {
           <Link to="/createLogin" className="link">Criar conta</Link>
          
         {name}
-        
+        {user.email}
       </div>
 
      <PigSvg/>

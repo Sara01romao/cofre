@@ -14,25 +14,25 @@ export  function CreateLogin() {
   const [passwordConfirm, setPasswordConfirm]= useState('');
   const [msgError, setMsgError] = useState(null);
   let navegate = useNavigate();
-  const {setUser, user} = useContext(UserContext);
+  const { user, setUser} = useContext(UserContext);
 
  
 
-  function handleCreate(event){
-    event.preventDefault();
-   /*  const user =[{name:name, email:email, password:password}]; */
-    
-   setUser({name:name, email:email, password:password})
-    if(password === passwordConfirm ){
+  function handleCreate(e){
+    e.preventDefault();;
+    const usuario ={name:name1, email:email, password:password};
+  
+
+   /*  if(password === passwordConfirm ){
       setMsgError(null)
      
-      /* localStorage.setItem('useCofre', JSON.stringify(user)) */
-      /* navegate('/') */
+       localStorage.setItem('useCofre', JSON.stringify(user)) 
+       navegate('/') 
 
       console.log(user)
     }else{
       setMsgError('Senha inválida')
-    }
+    } */
    
 
   }

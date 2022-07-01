@@ -63,7 +63,7 @@ export  function CreateLogin() {
             <Input typeInput="text" id="Email" setChange={setEmail} value={email} placeholder="Email"/>
             <Input typeInput="password" id="Senha" setChange={setPassword} value={password} placeholder="Senha"/>
             <Input typeInput="password" id="Confimar Senha" setChange={setPasswordConfirm} value={passwordConfirm} placeholder="Confirma senha"/>
-            {msgError?<p style={{color:'red'}}>{msgError}</p>:''}
+            {msgError?<small>{msgError}</small>:''}
             <Button typeBtn="submit" txt="Cadastrar"/>
           </form>
           <Link to="/" className="link">Voltar</Link>

@@ -43,12 +43,20 @@ export const MainCreate = styled.main`
     h1 {
       text-align: center;
     }
+
     form {
       flex: 1;
       padding: 30px 30px 15px;
       display: flex;
       flex-direction: column;
       gap: 20px;
+    }
+
+    form small{
+      position: relative;
+      top: -15px;
+      font-size: 16px;
+      color: #fd0000;
     }
   }
 

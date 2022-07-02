@@ -65,8 +65,10 @@ export default function Login() {
             <Input typeInput="password" id="Senha" setChange={setPassword} value={password} placeholder="Senha"/>
             <small>
               {msgError != null ? msgError:''}
+            </small>
+            <small>
               <Link to="/">Esqueceu a senha?</Link>
-              </small>
+            </small>
             
             <Button onClick={e => setName("sara")} txt="Entrar"></Button>
           </form>

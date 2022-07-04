@@ -6,6 +6,7 @@ import ilustration from '../../assets/images/create.svg'
 import Button from '../../components/Button';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/user';
+import Logo from '../../assets/images/logo.svg'
 
 export  function CreateLogin() {
   const [name, setName]= useState('');
@@ -50,13 +51,10 @@ export  function CreateLogin() {
   return (
     <MainCreate>
      
-        <div className='infoCreate'>
-         
-          <img src={ilustration} alt="ilustração objetivos" />
-          <p>Planejamento financeiro <br/>para realizar sonhos</p>
-        </div>
+      
      
         <div className='form-content'>
+        <img src={Logo} alt="logo" />
           <h1>Criar uma conta</h1>
           <form onSubmit={handleCreate} >
             <Input typeInput="text" id="Nome" setChange={setName} value={name} placeholder="Nome"/>
@@ -69,6 +67,12 @@ export  function CreateLogin() {
           <Link to="/" className="link">Voltar</Link>
       
       
+        </div>
+
+        <div className='infoCreate'>
+        
+          <img src={ilustration} alt="ilustração objetivos" />
+          <p>Planejamento financeiro <br/>para realizar sonhos</p>
         </div>
           
             

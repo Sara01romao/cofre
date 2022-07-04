@@ -5,14 +5,24 @@ export const MainForm = styled.main`
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: calc(100vh - 79px);
+  height: 100vh;
   align-items: center;
+  position: relative;
   .inputContent {
     padding: 0px 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+   
+  }
+
+  .logo{
+    
+    position: absolute;
+    top:0px;
+    left: 10px;
+    
   }
 
   form {
@@ -34,6 +44,8 @@ export const MainForm = styled.main`
     }
   }
 
+
+
   svg {
     max-width: 400px;
     display: block;
@@ -41,19 +53,20 @@ export const MainForm = styled.main`
   }
 
   @media screen and (max-width: 767px) {
-    grid-template-columns: 1fr;
+    display: flex;
+    align-content: center;
+    justify-content: center;
     .inputContent {
       padding: 0px 10px;
+    }
+
+    form {
+      max-width: 100%;
+      width: 100%;
     }
     svg {
       display: none;
     }
   }
 
-  @media screen and (max-width: 480px) {
-    form {
-      max-width: 100%;
-      width: 100%;
-    }
-  }
 `;

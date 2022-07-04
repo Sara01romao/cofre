@@ -4,6 +4,7 @@ import { MainForm } from "./styles";
 import { Input } from "../../components/Input";
 import { useContext, useEffect, useState } from "react";
 import PigSvg from "../../components/PigSvg";
+import Logo from "../../assets/images/logo.svg"
 import { UserContext } from "../../context/user";
 
 
@@ -57,8 +58,9 @@ export default function Login() {
 
   return (
     <MainForm>
+      
        <div className="inputContent">
-         
+       <img className="logo" src={Logo} alt="logo"/>
           <h1>Login</h1>
           <form onSubmit={handleSubmit}>
             <Input typeInput="text" id="Email" setChange={setEmail} value={email} placeholder="Email"/>
@@ -79,8 +81,12 @@ export default function Login() {
         {userData != null? userData.name : ''}
       </div>
 
-     <PigSvg/>
-
+      <div clasName="msgsContent">
+       
+        <PigSvg/>
+      </div>
+      
+     
     </MainForm>
     
   )

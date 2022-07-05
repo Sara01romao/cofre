@@ -5,21 +5,21 @@ export const MainCreate = styled.main`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  height: calc(100vh - 50px);
-  margin-top: 50px;
+  height:100vh;
+  position: relative;
 
   div {
     flex: 1;
   }
   .link {
-      display: flex;
-      justify-content: center;
-     
-      color: var(--color1);
-      &:hover {
-        color: var(--color2);
-      }
+    display: flex;
+    justify-content: center;
+
+    color: var(--color1);
+    &:hover {
+      color: var(--color2);
     }
+  }
 
   .infoCreate {
     flex: 1;
@@ -29,14 +29,10 @@ export const MainCreate = styled.main`
     align-items: center;
     justify-content: center;
     position: relative;
-    border: 1px solid red;
-    
 
-    
-
-    img{
-        max-width: 400px;
-        height: 400px;
+    img {
+      max-width: 400px;
+      height: 400px;
     }
 
     p {
@@ -52,14 +48,11 @@ export const MainCreate = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    
-    img{
-      border: 1px solid red;
+
+    img {
       position: absolute;
-      left:10px;
+      left: 20px;
       top: 0px;
-     
     }
     h1 {
       text-align: center;
@@ -74,7 +67,7 @@ export const MainCreate = styled.main`
       gap: 20px;
     }
 
-    form small{
+    form small {
       position: relative;
       top: -15px;
       font-size: 16px;
@@ -83,7 +76,6 @@ export const MainCreate = styled.main`
   }
 
   @media screen and (max-width: 767px) {
-    
     .infoCreate {
       display: none;
     }

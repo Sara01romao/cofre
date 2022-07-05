@@ -5,7 +5,8 @@ export const MainCreate = styled.main`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 50px);
+  margin-top: 50px;
 
   div {
     flex: 1;
@@ -82,7 +83,7 @@ export const MainCreate = styled.main`
   }
 
   @media screen and (max-width: 767px) {
-    height: auto;
+    
     .infoCreate {
       display: none;
     }

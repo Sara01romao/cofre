@@ -54,7 +54,7 @@ export  function CreateLogin() {
       
      
         <div className='form-content'>
-        <img src={Logo} alt="logo" />
+         <img src={Logo} alt="logo" className='logo' />
           <h1>Criar uma conta</h1>
           <form onSubmit={handleCreate} >
             <Input typeInput="text" id="Nome" setChange={setName} value={name} placeholder="Nome"/>

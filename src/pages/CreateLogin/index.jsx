@@ -7,6 +7,7 @@ import Button from '../../components/Button';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/user';
 import Logo from '../../assets/images/logo.svg'
+import Loading from '../../components/Loading';
 
 export  function CreateLogin() {
   const [name, setName]= useState('');
@@ -52,7 +53,7 @@ export  function CreateLogin() {
     <MainCreate>
      
       
-     
+     {/* <Loading/> */}
         <div className='form-content'>
          <img src={Logo} alt="logo" className='logo' />
           <h1>Criar uma conta</h1>

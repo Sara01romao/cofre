@@ -13,6 +13,7 @@ export  function Input({typeInput, setChange, value, id, placeholder}) {
         onChange={e =>setChange(e.target.value)} value={value}
         placeholder={placeholder}
         required
+        autocomplete="off"
       />
      </InpuContainer>
      

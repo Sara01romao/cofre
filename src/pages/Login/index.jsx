@@ -9,9 +9,6 @@ import { UserContext } from "../../context/user";
 
 
 
-
-
-
 export default function Login() {
   const {userData, setUserData} = useContext(UserContext)
   const [user, setUser] = useState('')
@@ -77,8 +74,6 @@ export default function Login() {
          
           <Link to="/createLogin" className="link">Criar conta</Link>
          
-       
-        {userData != null? userData.name : ''}
       </div>
 
       <div clasName="msgsContent">

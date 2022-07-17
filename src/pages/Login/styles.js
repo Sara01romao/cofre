@@ -44,6 +44,12 @@ export const MainForm = styled.main`
     }
   }
 
+  form small {
+      position: relative;
+      top: -15px;
+      font-size: 16px;
+      color: #fd0000;
+    }
 
 
   svg {

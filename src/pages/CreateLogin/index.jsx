@@ -17,33 +17,25 @@ export  function CreateLogin() {
   const [msgError, setMsgError] = useState(null);
   let navegate = useNavigate();
   let {setUserData} = useContext(UserContext);
+  const [loding, setLoding] = useState(false);
 
  
 
   function handleCreate(e){
     e.preventDefault();
+    setLoding(true);
     const userObj ={name:name, email:email, password:password};
 
     if(password === passwordConfirm ){
+      
       setMsgError(null)
       setUserData(userObj)
-       
+      setLoding(false);
       navegate('/') 
     }else{
       setMsgError('Senha inválida')
+      setLoding(false);
     }
-
-   /*  if(password === passwordConfirm ){
-      setMsgError(null)
-     
-       localStorage.setItem('useCofre', JSON.stringify(user)) 
-       navegate('/') 
-
-      console.log(user)
-    }else{
-      setMsgError('Senha inválida')
-    } */
-   
  
   }
 
@@ -52,8 +44,9 @@ export  function CreateLogin() {
   return (
     <MainCreate>
      
-      
-     <Loading/>
+      {loding ==! false ? 
+        <>
+        <Loading/> 
         <div className='form-content'>
          <img src={Logo} alt="logo" className='logo' />
           <h1>Criar uma conta</h1>
@@ -75,8 +68,33 @@ export  function CreateLogin() {
           <img src={ilustration} alt="ilustração objetivos" />
           <p>Planejamento financeiro <br/>para realizar sonhos</p>
         </div>
-          
-            
+        </>
+      
+      : 
+       <>
+        <div className='form-content'>
+         <img src={Logo} alt="logo" className='logo' />
+          <h1>Criar uma conta</h1>
+          <form onSubmit={handleCreate} >
+            <Input typeInput="text" id="Nome" setChange={setName} value={name} placeholder="Nome"/>
+            <Input typeInput="text" id="Email" setChange={setEmail} value={email} placeholder="Email"/>
+            <Input typeInput="password" id="Senha" setChange={setPassword} value={password} placeholder="Senha"/>
+            <Input typeInput="password" id="Confimar Senha" setChange={setPasswordConfirm} value={passwordConfirm} placeholder="Confirma senha"/>
+            {msgError?<small>{msgError}</small>:''}
+            <Button typeBtn="submit" txt="Cadastrar"/>
+          </form>
+          <Link to="/" className="link">Voltar</Link>
+      
+      
+        </div>
+
+        <div className='infoCreate'>
+        
+          <img src={ilustration} alt="ilustração objetivos" />
+          <p>Planejamento financeiro <br/>para realizar sonhos</p>
+        </div>
+        </>
+       }
         
     </MainCreate>
   )

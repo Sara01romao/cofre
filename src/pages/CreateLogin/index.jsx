@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/user';
 import Logo from '../../assets/images/logo.svg'
 import Loading from '../../components/Loading';
+import { toast } from 'react-toastify';
 
 export  function CreateLogin() {
   const [name, setName]= useState('');
@@ -31,8 +32,10 @@ export  function CreateLogin() {
       setMsgError(null)
       setUserData(userObj)
       setLoding(false);
+      toast.success("Cadastrado com sucesso");
       navegate('/') 
     }else{
+      toast.error("Senha inválida");
       setMsgError('Senha inválida')
       setLoding(false);
     }

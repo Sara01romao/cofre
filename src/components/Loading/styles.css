@@ -1,10 +1,13 @@
 .spinner {
     width: 56px;
     height: 56px;
-    border: 11.2px #474bff double;
+    border: 11.2px #8f12c0 double;
     border-left-style: solid;
     border-radius: 50%;
     animation: spinner-aib1d7 0.75s infinite linear; 
+    position: absolute;
+    z-index: 1;
+   left: calc(50% - 28px);
  }
  
  @keyframes spinner-aib1d7 {

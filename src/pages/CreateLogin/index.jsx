@@ -53,7 +53,7 @@ export  function CreateLogin() {
     <MainCreate>
      
       
-     {/* <Loading/> */}
+     <Loading/>
         <div className='form-content'>
          <img src={Logo} alt="logo" className='logo' />
           <h1>Criar uma conta</h1>

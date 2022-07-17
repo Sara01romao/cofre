@@ -45,7 +45,7 @@ export default function Login() {
       setMsgError('Email ou senha incorretos')
     }
   }else{
-    setMsgError('usuario não existe')
+    setMsgError('Usuário não existe')
   }
 
   

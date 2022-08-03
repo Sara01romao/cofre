@@ -26,8 +26,8 @@ export default function Login() {
     if(userData.email === email && userData.password === password){
       setMsgError(null)
       setLoding(false);
-     /*  navigate('/home')   */
-    }else if(userData.email != email || userData.password !== password){
+      navigate('/home')  
+    }else if(userData.email !== email || userData.password !== password){
       setMsgError('Email ou senha incorretos')
       setLoding(false);
     }
@@ -66,7 +66,7 @@ export default function Login() {
             
           </div>
 
-          <div clasName="msgsContent">
+          <div className="msgsContent">
           
             <PigSvg/>
           </div>
@@ -95,7 +95,7 @@ export default function Login() {
             
           </div>
 
-          <div clasName="msgsContent">
+          <div className="msgsContent">
           
             <PigSvg/>
           </div>

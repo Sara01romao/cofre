@@ -17,6 +17,7 @@ Front-end
 Reactjs
 react-router-dom
 styled-components
+Toastify
 
 
 ```
